@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: /sitemap.xml
+# Si quieres bloquear rutas de desarrollo, añade Disallow: /ruta/
