@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto – PsicoClarity</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon"><i class="fas fa-brain"></i></span>
+      <span class="logo-text">Psico<strong>Clarity</strong></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="contacto.html" class="active">Contacto</a></li>
+      <li><a href="https://wa.me/1234567890" target="_blank" class="btn-nav">Agendar Cita</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-content reveal">
+    <span class="tag">Estamos para ti</span>
+    <h1>Contáctanos</h1>
+    <p>Escríbenos, llámanos o visítanos. Estamos aquí para ayudarte.</p>
+  </div>
+  <div class="breadcrumb"><a href="index.html">Inicio</a> <i class="fas fa-chevron-right"></i> Contacto</div>
+</section>
+
+<!-- INFO + FORM -->
+<section class="contacto-section">
+  <div class="container contacto-grid">
+
+    <!-- INFO -->
+    <div class="contacto-info reveal">
+      <h3>Información de contacto</h3>
+      <p>No estás solo/a. Nuestro equipo está disponible para responder tus consultas y orientarte hacia el proceso terapéutico que necesitas.</p>
+
+      <div class="info-item">
+        <div class="info-icon"><i class="fas fa-phone"></i></div>
+        <div>
+          <strong>Teléfono</strong>
+          <p>+1 234 567 890</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon wp"><i class="fab fa-whatsapp"></i></div>
+        <div>
+          <strong>WhatsApp</strong>
+          <p><a href="https://wa.me/1234567890" target="_blank">+1 234 567 890</a></p>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+        <div>
+          <strong>Correo electrónico</strong>
+          <p><a href="mailto:hola@psicoclarity.com">hola@psicoclarity.com</a></p>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div>
+          <strong>Dirección</strong>
+          <p>Av. Principal 123, Miraflores, Lima, Perú</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon"><i class="fas fa-clock"></i></div>
+        <div>
+          <strong>Horario de atención</strong>
+          <p>Lunes a Viernes: 8am – 8pm<br/>Sábados: 9am – 2pm</p>
+        </div>
+      </div>
+
+      <div class="contacto-social">
+        <span>Síguenos en redes:</span>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://wa.me/1234567890" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="contacto-form reveal">
+      <h3>Envíanos un mensaje</h3>
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" placeholder="Tu nombre completo" required/>
+          </div>
+          <div class="form-group">
+            <label>Teléfono</label>
+            <input type="tel" placeholder="+1 234 567 890"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Correo electrónico</label>
+          <input type="email" placeholder="tu@correo.com" required/>
+        </div>
+        <div class="form-group">
+          <label>Servicio de interés</label>
+          <select>
+            <option value="">Selecciona un servicio</option>
+            <option>Psicología Infantil</option>
+            <option>Psicología Adolescentes</option>
+            <option>Psicología Adultos</option>
+            <option>Terapia de Pareja</option>
+            <option>Psicología Familiar</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Mensaje</label>
+          <textarea rows="4" placeholder="Cuéntanos brevemente cómo podemos ayudarte..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary btn-full">Enviar mensaje <i class="fas fa-paper-plane"></i></button>
+        <p class="form-note"><i class="fas fa-lock"></i> Tu información es 100% confidencial.</p>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <i class="fas fa-check-circle"></i>
+        <h4>¡Mensaje enviado!</h4>
+        <p>Te contactaremos a la brevedad posible. También puedes escribirnos directamente por WhatsApp.</p>
+        <a href="https://wa.me/1234567890" target="_blank" class="btn-primary"><i class="fab fa-whatsapp"></i> Ir a WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA -->
+<section class="mapa-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="tag">Visítanos</span>
+      <h2>¿Dónde estamos?</h2>
+      <p>Av. Principal 123, Miraflores, Lima, Perú</p>
+    </div>
+    <div class="mapa-container reveal">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.695!2d-77.0311!3d-12.1219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5f9c14e3a0d%3A0x5d2c6cfa406f61c7!2sMiraflores%2C%20Lima%2C%20Per%C3%BA!5e0!3m2!1ses!2spe!4v1700000000000"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK CONTACT CARDS -->
+<section class="quick-contact">
+  <div class="container">
+    <div class="qc-grid">
+      <a href="https://wa.me/1234567890" target="_blank" class="qc-card reveal" style="--delay:.1s">
+        <i class="fab fa-whatsapp"></i>
+        <h4>WhatsApp</h4>
+        <p>Respuesta inmediata</p>
+      </a>
+      <a href="tel:+1234567890" class="qc-card reveal" style="--delay:.2s">
+        <i class="fas fa-phone"></i>
+        <h4>Llamar</h4>
+        <p>+1 234 567 890</p>
+      </a>
+      <a href="mailto:hola@psicoclarity.com" class="qc-card reveal" style="--delay:.3s">
+        <i class="fas fa-envelope"></i>
+        <h4>Correo</h4>
+        <p>hola@psicoclarity.com</p>
+      </a>
+      <a href="https://www.instagram.com" target="_blank" class="qc-card reveal" style="--delay:.4s">
+        <i class="fab fa-instagram"></i>
+        <h4>Instagram</h4>
+        <p>@psicoclarity</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-text"><span class="logo-icon"><i class="fas fa-brain"></i></span> Psico<strong>Clarity</strong></span>
+      <p>Centro psicológico especializado en el bienestar emocional de toda la familia.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/1234567890"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Servicios</h4>
+      <ul>
+        <li><a href="servicios.html">Psicología Infantil</a></li>
+        <li><a href="servicios.html">Adolescentes</a></li>
+        <li><a href="servicios.html">Adultos</a></li>
+        <li><a href="servicios.html">Parejas</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contacto</h4>
+      <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+      <p><i class="fab fa-whatsapp"></i> +1 234 567 890</p>
+      <p><i class="fas fa-envelope"></i> hola@psicoclarity.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2024 PsicoClarity. Todos los derechos reservados.</p></div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
