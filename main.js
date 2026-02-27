@@ -20,12 +20,20 @@ const navLinks = document.getElementById('navLinks');
 hamburger?.addEventListener('click', () => {
   hamburger.classList.toggle('open');
   navLinks.classList.toggle('open');
+  // Evitar que la clase .scrolled distorsione el menú: añadir clase temporal
+  if (navLinks.classList.contains('open')) {
+    navbar.classList.add('menu-open');
+  } else {
+    navbar.classList.remove('menu-open');
+    handleScroll();
+  }
 });
 // Close on link click
 navLinks?.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
     navLinks.classList.remove('open');
+    navbar.classList.remove('menu-open');
   });
 });
 // Close on outside click
@@ -33,6 +41,7 @@ document.addEventListener('click', (e) => {
   if (!navbar.contains(e.target)) {
     hamburger?.classList.remove('open');
     navLinks?.classList.remove('open');
+    navbar.classList.remove('menu-open');
   }
 });
 

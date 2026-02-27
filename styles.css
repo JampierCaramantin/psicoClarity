@@ -147,6 +147,14 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
   box-shadow: 0 4px 24px rgba(0,0,0,.08);
   padding: .6rem 0;
 }
+
+/* Cuando el menú móvil está abierto, desactivar el backdrop y fondo del navbar
+   para que el panel del menú no se vea distorsionado por filtros del header. */
+.navbar.menu-open {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+}
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -1140,11 +1148,14 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
     padding: 2rem;
     transition: right .35s ease;
     box-shadow: -8px 0 40px rgba(0,0,0,.15);
-    z-index: 999;
+    z-index: 1102; /* elevar para que quede por encima del footer y elementos flotantes */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    backface-visibility: hidden;
   }
   .nav-links.open { right: 0; }
   .nav-links a { color: var(--dark) !important; font-size: 1.1rem; }
-  .hamburger { display: flex; z-index: 1001; }
+  .hamburger { display: flex; z-index: 1103; }
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; }
   .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
